@@ -35,3 +35,8 @@ des_left_bottom = [image_center_x - 5, image_near_bottom_y]
 des_left_top = [des_left_bottom[0], des_left_bottom[1] - 10]
 des_right_top = [des_left_top[0] + 10, des_left_top[1]]
 des_right_bottom = [des_right_top[0], des_right_top + 10]
+
+destination = np.float32(des_left_bottom, des_left_top,
+                         des_right_top, des_right_bottom)
+# get warped image
+warped_image = perspect_transform(image, source, destination)
