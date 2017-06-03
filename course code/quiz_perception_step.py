@@ -2,6 +2,7 @@
 import matplotlib.image as mpimg
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
+import numpy as np
 
 # define file names
 filename = "sample.jpg"
@@ -9,8 +10,6 @@ image = mpimg.imread(filename)  # read file
 plt.imshow(image) #show image
 plt.show()
 
-# import numpy
-import numpy as np
 print(image.dtype, image.shape, np.min(image), np.max(image))
 
 # get red channel
