@@ -22,18 +22,23 @@ green_channel[:, :, [0, 2]] = 0
 blue_channel = np.copy(image)
 blue_channel[:, :, [0, 1]] = 0
 
+# define a function to perform a color threshold
+def color_thresh(img, rgb_thresh=(0, 0, 0)):
+    # create an empty array the same size in x and y as the image but only has one channel
+    color_select = np.zeros_like(img[:, :, 0])
 
-# plot red channel
-plt.subplot(311)
-plt.imshow(red_channel)
+    # create the filter for each color
+    red_thresh = img[:, :, 0] > rgb_thresh[0]
+    green_thresh = img[:, :, 1] > rgb_thresh[1]
+    blue_thresh = img[:, :, 2] > rgb_thresh[2]
 
-# plot green channel
-plt.subplot(312)
-plt.imshow(green_channel)
+    # combine the filter
+    thresh = red_thresh & green_thresh & blue_thresh
 
-# plot blue channel
-plt.subplot(313)
-plt.imshow(blue_channel)
+    # set the pixels
+    color_select[thresh] = 1
+
+    return color_select
 
 # show figure
 plt.show()
