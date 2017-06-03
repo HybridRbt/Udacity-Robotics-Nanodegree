@@ -22,8 +22,6 @@ green_channel[:, :, [0, 2]] = 0
 blue_channel = np.copy(image)
 blue_channel[:, :, [0, 1]] = 0
 
-# create a figure for plotting
-fig = plt.figure(figsize=(5, 10))
 
 # plot red channel
 plt.subplot(311)
