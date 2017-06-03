@@ -40,5 +40,11 @@ def color_thresh(img, rgb_thresh=(0, 0, 0)):
 
     return color_select
 
+red_th = 160
+green_th = 160
+blue_th = 160
+
+rgb_th = (red_th, green_th, blue_th)
+
 # show figure
 plt.show()
