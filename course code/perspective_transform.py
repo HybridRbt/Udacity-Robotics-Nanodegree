@@ -56,5 +56,5 @@ ax1.set_title('Original Image', fontsize = 40)
 
 ax2.imshow(warped_image, cmap = 'gray')
 ax2.set_title('Warped Image', fontsize = 40)
-plt.subplots_adjust(left = 0, right = 1, top = 0.9, bottom = 0)
+plt.subplots_adjust(left = 0.03, right = 0.58, top = 0.9, bottom = 0.05)
 plt.show()
