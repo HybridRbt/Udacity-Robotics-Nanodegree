@@ -1,6 +1,7 @@
 # import libs
 import matplotlib.image as mpimg
 import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
 
 # define file names
 filename = "sample.jpg"
