@@ -16,4 +16,9 @@ def perspect_transform(img, src, dst):
 
     return warped
 
-    # define source pointv
+
+# define source point
+left_bottom = [15.629, 141.177]
+left_top = [118.855, 96.0161]
+right_top = [199.5, 96.6613]
+right_bottom = [301.435, 141.177]
