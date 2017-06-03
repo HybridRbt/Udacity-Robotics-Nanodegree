@@ -7,8 +7,6 @@ import numpy as np
 # define file names
 filename = "sample.jpg"
 image = mpimg.imread(filename)  # read file
-plt.imshow(image) #show image
-plt.show()
 
 print(image.dtype, image.shape, np.min(image), np.max(image))
 
