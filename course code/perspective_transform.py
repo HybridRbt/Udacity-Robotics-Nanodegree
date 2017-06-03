@@ -1,5 +1,6 @@
 import cv2
 import matplotlib.image as mpimg
+import matplotlib.pyplot as plt
 import numpy as np
 
 # read the grid image
