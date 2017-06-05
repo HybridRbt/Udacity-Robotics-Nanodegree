@@ -54,3 +54,27 @@ def color_thresh(img, rgb_thresh=(0, 0, 0)):
     color_select[thresh] = 1
 
     return color_select
+
+# define the function to convert coords
+def rover_coords(binary_image):
+    # get non-zero pixels
+    # note: the tuple returned by nonzero() is indexed by row, which means ypos comes first
+    ypos, xpos = binary_image.nonzero()
+
+    # get length and height of image
+    length = binary_image.shape[1]
+    height = binary_image.shape[0]
+
+    # 1. shift
+    xpos1 = xpos - length / 2
+    ypos1 = ypos - height
+
+    # 2. mirror along y
+    xpos2 = -xpos1
+    ypos2 = ypos1
+
+    # 3. rotate +90 degree
+    xpos3 = -ypos2
+    ypos3 = xpos2
+
+    return xpos3.astype(np.float), ypos3.astype(np.float)
